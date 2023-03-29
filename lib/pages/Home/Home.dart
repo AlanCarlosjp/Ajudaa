@@ -40,8 +40,14 @@ class _MyHomePageState extends State<MyHomePage> {
           width: MediaQuery.of(context).size.width * 1,
           decoration: BoxDecoration(
               gradient: LinearGradient(
-                  colors: [Theme.of(context).primaryColor, Colors.white],
-                  stops: [0, 1],
+                  colors: [
+                Color.fromRGBO(75, 57, 239, 1),
+                Color.fromARGB(255, 223, 223, 223)
+              ],
+                  stops: [
+                0,
+                1
+              ],
                   begin: AlignmentDirectional(0, -1),
                   end: AlignmentDirectional(0, 1))),
         ),

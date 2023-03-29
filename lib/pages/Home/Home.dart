@@ -60,16 +60,17 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               Align(
-                child: FloatingActionButton.large(
-                  onPressed: () {
-                    print('Apertado');
-                  },
-                  child: Icon(
-                    Icons.notifications_active_outlined,
-                    size: 70,
-                  ),
+                  child: ElevatedButton(
+                onPressed: () {},
+                child: Icon(
+                  Icons.notifications_active_outlined,
+                  size: 90,
                 ),
-              ),
+                style: ElevatedButton.styleFrom(
+                    shape: CircleBorder(),
+                    padding: EdgeInsets.all(24),
+                    fixedSize: Size(200, 200)),
+              )),
             ],
           ),
         ),

@@ -1,8 +1,5 @@
 import 'package:ajudaa/pages/Home/HomeModel.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -50,6 +47,31 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
                   begin: AlignmentDirectional(0, -1),
                   end: AlignmentDirectional(0, 1))),
+          alignment: AlignmentDirectional.center,
+          child: Stack(
+            alignment: AlignmentDirectional.center,
+            children: [
+              Align(
+                alignment: AlignmentDirectional(0, -0.65),
+                child: Text(
+                  'Aperte para pedir ajuda !!',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+                ),
+              ),
+              Align(
+                child: FloatingActionButton.large(
+                  onPressed: () {
+                    print('Apertado');
+                  },
+                  child: Icon(
+                    Icons.notifications_active_outlined,
+                    size: 70,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

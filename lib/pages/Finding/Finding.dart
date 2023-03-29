@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class FindingPage extends StatefulWidget {
   const FindingPage({Key? key}) : super(key: key);
@@ -9,7 +10,8 @@ class FindingPage extends StatefulWidget {
 
 class _FindingPageSatate extends State<FindingPage> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
-
+  var animacao =
+      'https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/Mobilo/A.json';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +44,9 @@ class _FindingPageSatate extends State<FindingPage> {
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
                 ),
               ),
-              Align(child: Text('teste')),
+              Align(
+                child: Lottie.network(animacao, fit: BoxFit.fill),
+              ),
             ],
           ),
         ),

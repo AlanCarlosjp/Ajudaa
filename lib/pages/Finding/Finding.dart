@@ -1,32 +1,14 @@
-import 'package:ajudaa/pages/Finding/Finding.dart';
-import 'package:ajudaa/pages/Home/HomeModel.dart';
 import 'package:flutter/material.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+class FindingPage extends StatefulWidget {
+  const FindingPage({Key? key}) : super(key: key);
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<FindingPage> createState() => _FindingPageSatate();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  late HomeModel _model;
-
+class _FindingPageSatate extends State<FindingPage> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
-  final _unfocusNode = FocusNode();
-
-  @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    _model.dispose();
-
-    _unfocusNode.dispose();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -55,28 +37,12 @@ class _MyHomePageState extends State<MyHomePage> {
               Align(
                 alignment: AlignmentDirectional(0, -0.65),
                 child: Text(
-                  'Aperte para pedir ajuda !!',
+                  'Estamos procurando, aguarde por favor !!',
                   textAlign: TextAlign.center,
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
                 ),
               ),
-              Align(
-                  child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const FindingPage()));
-                },
-                child: Icon(
-                  Icons.notifications_active_outlined,
-                  size: 90,
-                ),
-                style: ElevatedButton.styleFrom(
-                    shape: CircleBorder(),
-                    padding: EdgeInsets.all(24),
-                    fixedSize: Size(200, 200)),
-              )),
+              Align(child: Text('teste')),
             ],
           ),
         ),
